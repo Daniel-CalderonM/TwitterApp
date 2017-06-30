@@ -1,4 +1,5 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -6,14 +7,60 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".LoginActivity" >
+    tools:context=".LoginActivity"
+    android:background="@color/colorLogin"
+    >
 
     <Button
-        android:layout_width="match_parent"
+        android:id="@+id/button"
+        android:layout_width="175dp"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_margin="20dp"
+        android:layout_marginBottom="75dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/roundcorner"
         android:onClick="loginToRest"
-        android:text="@string/login_label" />
+        android:text="@string/login_label"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="27dp"
+        android:padding="0dp"
+        android:cropToPadding="true"
+        android:src="@drawable/twiter_transparent"
+
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/button" />
+
+    <TextView
+        android:id="@+id/tvWelcome"
+        android:layout_width="195dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="85dp"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textColor="@android:color/white"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        tools:text="@string/welcome_to_twitter"
+        android:layout_below="@+id/imageView"
+        android:layout_alignStart="@+id/imageView"
+        android:layout_marginStart="14dp" />
+
+    <TextView
+        android:id="@+id/tvInfo"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tvWelcome"
+        android:layout_below="@+id/tvWelcome"
+        android:layout_marginTop="32dp"
+        android:text="@string/twitter_info"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@android:color/white" />
 
 </RelativeLayout>

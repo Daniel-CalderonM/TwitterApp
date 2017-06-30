@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Rest Client Template</string>
+    <string name="app_name">SimpleTweet</string>
     <string name="login_label">Log in</string>
     <string name="intent_scheme">oauth</string>
     <string name="intent_host">cprest</string>
-
+    <string name="welcome_to_twitter">Welcome to Twitter</string>
+    <string name="twitter_info">See what\'s happening in the world right now</string>
 </resources>

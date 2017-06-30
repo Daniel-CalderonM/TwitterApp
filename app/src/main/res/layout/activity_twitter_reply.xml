@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.codepath.apps.restclienttemplate.TwitterReply">
+
+    <Button
+        android:id="@+id/btnReply"
+        android:layout_width="111dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:background="@drawable/roundtweet"
+        android:text="Reply"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:ignore="MissingConstraints" />
+    <TextView
+        android:id="@+id/tvUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:layout_marginStart="30dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="30dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/textInputLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:counterEnabled="true"
+        app:counterMaxLength="140"
+        app:counterOverflowTextAppearance="@style/counterOverride"
+        app:counterTextAppearance="@style/counterText"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="8dp"
+
+        tools:layout_editor_absoluteY="8dp">
+
+        <EditText
+            android:id="@+id/tvReply"
+            android:layout_width="255dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="40dp"
+            android:background="@android:color/transparent"
+            android:ems="10"
+            android:textColor="@color/colorPrimary"
+            android:textCursorDrawable="@null" />
+    </android.support.design.widget.TextInputLayout>
+</android.support.constraint.ConstraintLayout>
