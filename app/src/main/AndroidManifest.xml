@@ -33,11 +33,17 @@
                     android:scheme="@string/intent_scheme" />
             </intent-filter>
         </activity>
-        <activity android:name=".TimelineActivity" />
+        <activity android:name=".TimelineActivity"
+            android:label=" "
+            android:logo="@drawable/compose"/>
         <activity
             android:name=".ComposeActivity"
             android:windowSoftInputMode="adjustResize" />
-        <activity android:name=".TwitterReply"  android:windowSoftInputMode="adjustResize" ></activity>
+        <activity
+            android:name=".TwitterReply"
+            android:windowSoftInputMode="adjustResize"
+            />
+        <activity android:name=".ProfileActivity"></activity>
     </application>
 
 </manifest>

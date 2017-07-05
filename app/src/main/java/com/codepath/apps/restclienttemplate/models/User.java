@@ -12,6 +12,13 @@ import org.json.JSONObject;
 
 public class User implements Parcelable {
 
+    public long uid;
+    public String screenName;
+    public String profileImageUrl;
+
+    public String tagLine;
+    public int followersCount;
+    public int followingCount;
     //list the attributes
     public String name;
 
@@ -31,9 +38,6 @@ public class User implements Parcelable {
         return profileImageUrl;
     }
 
-    public long uid;
-    public String screenName;
-    public String profileImageUrl;
     //desirialize the json
     public static User fromJSON(JSONObject json) throws JSONException{
         User user = new User();
@@ -43,6 +47,9 @@ public class User implements Parcelable {
         user.uid = json.getLong("id");
         user.screenName = json.getString("screen_name");
         user.profileImageUrl = json.getString("profile_image_url");
+        user.tagLine = json.getString("description");
+        user.followersCount = json.getInt("followers_count");
+        user.followingCount = json.getInt("friends_count");
         return user;
     }
 
