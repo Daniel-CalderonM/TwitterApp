@@ -6,7 +6,6 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -49,7 +48,7 @@ public class TimelineActivity extends AppCompatActivity implements TweetListFrag
         startActivity(i);
         finish();
     }
-    public void onCompose(MenuItem item){
+    public void onCompose(){
         Intent i = new Intent(this,ComposeActivity.class);
         startActivityForResult(i,20);
         finish();
@@ -69,7 +68,6 @@ public class TimelineActivity extends AppCompatActivity implements TweetListFrag
             case 20:
                 Tweet tweet = (Tweet) data.getParcelableExtra("TWEET");
                 TweetListFragment tweetListFragment = (TweetListFragment) getSupportFragmentManager().findFragmentByTag("android:switcher:"+R.id.viewpager+":0");
-                Log.i("Info",tweet.getUser().getScreenName()+" ");
                 tweetListFragment.updateTimeline(tweet);
                 finish();
                 break;

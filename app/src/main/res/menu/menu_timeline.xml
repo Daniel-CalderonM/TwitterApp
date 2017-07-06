@@ -8,12 +8,12 @@
         android:onClick="onProfileView"
         android:title="Item"
         app:showAsAction="ifRoom" />
-    <item
+<!--    <item
         android:id="@+id/miCompose"
         android:icon = "@drawable/compose"
         android:title="Item"
         android:onClick="onCompose"
         app:showAsAction="ifRoom"
-        />
+        />-->
 
 </menu>
