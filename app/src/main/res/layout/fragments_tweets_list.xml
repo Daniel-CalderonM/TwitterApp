@@ -32,7 +32,7 @@
         android:layout_height="65dp"
         android:layout_gravity="end|bottom"
         android:layout_marginBottom="30dp"
-        android:layout_marginRight="15dp"
+        android:layout_marginRight="25dp"
         app:fabSize="mini"
         android:src="@drawable/compose"
         app:backgroundTint="@color/colorPrimary" />

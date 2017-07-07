@@ -56,6 +56,7 @@ public class TwitterClient extends OAuthBaseClient {
 		RequestParams params = new RequestParams();
 		params.put("count", 25);
 		params.put("since_id",1);
+
 		client.get(apiUrl, params, handler);
 	}
 	public void getUserline(String screenName,AsyncHttpResponseHandler handler) {
@@ -64,6 +65,7 @@ public class TwitterClient extends OAuthBaseClient {
 		RequestParams params = new RequestParams();
 		params.put("screen_name",screenName);
 		params.put("count", 25);
+
 		client.get(apiUrl, params, handler);
 	}
 	public void getUserInfo(AsyncHttpResponseHandler handler) {

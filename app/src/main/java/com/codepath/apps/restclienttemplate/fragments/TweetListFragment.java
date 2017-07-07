@@ -34,7 +34,6 @@ import cz.msebera.android.httpclient.Header;
 /**
  * Created by calderond on 7/3/17.
  */
-
 public class TweetListFragment extends Fragment implements TweetAdapter.TweetAdapterListener{
     TwitterClient client;
 
@@ -42,7 +41,6 @@ public class TweetListFragment extends Fragment implements TweetAdapter.TweetAda
         //handle tweet selection
         public void onTweetSelected(Tweet tweet);
     }
-
     TweetAdapter tweetAdapter;
     ArrayList<Tweet> tweets;
     RecyclerView rvTweets;
@@ -52,8 +50,6 @@ public class TweetListFragment extends Fragment implements TweetAdapter.TweetAda
     private final int REQUEST_CODE = 20;
     private SwipeRefreshLayout swipeContainer;
     //Inflation happens inside onCreateView
-
-
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -84,6 +80,7 @@ public class TweetListFragment extends Fragment implements TweetAdapter.TweetAda
         rvTweets.setAdapter(tweetAdapter);
         swipeContainer = (SwipeRefreshLayout) v.findViewById(R.id.swipeContainer);
         // Setup refresh listener which triggers new data loading
+
         swipeContainer.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
