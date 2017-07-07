@@ -54,7 +54,7 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Encountered a challenge with moving my extra fetature for the fragment section of the app. 
+Encountered a challenge with moving my extra features into fragments. 
 
 ## Open-source libraries used
 
